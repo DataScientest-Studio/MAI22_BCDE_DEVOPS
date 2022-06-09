@@ -12,4 +12,9 @@ def test_welcome2():
 def test_number():
     r = requests.get(url="http://127.0.0.1:8000/number") 
     assert int(r.text)==1
+
+def test_health():
+    r = requests.get(url="http://127.0.0.1:8000/health")
+    assert r.json()=="Hello"
+    
     
