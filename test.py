@@ -15,5 +15,6 @@ def test_number():
 
 def test_health():
     r = requests.get(url="http://127.0.0.1:8000/health")
-    assert r.text=="Hello"
+    assert r.json()=="Hello"
+    
     
